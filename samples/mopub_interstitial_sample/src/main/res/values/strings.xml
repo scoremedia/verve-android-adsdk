@@ -1,0 +1,4 @@
+<resources>
+	<string name="app_name">MoPub Interstitial Sample</string>
+	<string name="load_interstitial">Load Interstitial</string>
+</resources>
