@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.mopub.mobileads.example.banner"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile project(':verve_import')
+    // Begin MoPub Requirenments
+    compile('com.mopub:mopub-sdk:3.10.0@aar') {
+        transitive = true
+    }
+    // End MoPub
+}

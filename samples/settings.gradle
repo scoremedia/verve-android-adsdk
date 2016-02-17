@@ -1,5 +1,0 @@
-include ':vervesdk_sample'
-include ':dfp_banner_sample'
-include ':dfp_interstitial_sample'
-include ':mopub_banner_sample'
-include ':mopub_interstitial_sample'
