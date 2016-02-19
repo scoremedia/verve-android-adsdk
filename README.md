@@ -1,1 +1,1 @@
-# verve-ios-adsdk
+# verve-android-adsdk
