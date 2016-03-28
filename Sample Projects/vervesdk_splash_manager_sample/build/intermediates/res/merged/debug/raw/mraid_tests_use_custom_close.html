@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta id="metaViewport" name="viewport" content="width=device-width">
+<style type="text/css">
+	body { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; background-color: #ff0000; }
+	div.adwrapper { margin: 0px; padding: 0px;  overflow: hidden; background-color: #ffffff; height: 500px; }
+</style>
+
+<script type="text/javascript">
+var b = true;
+function test() {
+	mraid.useCustomClose(b);
+	b = !b;
+}
+</script>
+
+</head>
+<body>
+	<script src="mraid.js"></script>
+	<div id="adwrapper">
+		<div style="background-color: #00ff00;" onclick="test();">
+			MRAID use custom test
+		</div>
+		<div style="background-color: #ffff00;" onclick="mraid.expand();">
+			expand
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="file:///android_asset/expand_handler.js"></script>
+</body>
+</html>

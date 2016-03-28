@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<script src="mraid.js"></script>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, height=50">
+<style type="text/css">
+	body { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; background-color: transparent; }
+	div.adwrapper { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; }
+</style>
+<script type="text/javascript">
+	function onReady() {
+		document.getElementById("sms").innerHTML = mraid.supports("sms");
+		document.getElementById("tel").innerHTML = mraid.supports("tel");
+		document.getElementById("calendar").innerHTML = mraid.supports("calendar");
+		document.getElementById("storePicture").innerHTML = mraid.supports("storePicture");
+		document.getElementById("inlineVideo").innerHTML = mraid.supports("inlineVideo");
+	}
+	
+	// valid
+	function calendar1() {
+		mraid.createCalendarEvent({ description: "End of World", location: "everywhere", start: "2013-01-21T00:00-05:00", end: "2013-01-22T01:00-05:00" });
+	}
+	
+	// mailformed start time
+	function calendar2() {
+		mraid.createCalendarEvent({ description: "End of World", location: "everywhere", start: "201301-21T00:00-05:00", end: "2013-01-22T00:00-05:00" });
+	}
+	
+	// mailformed end time
+	function calendar3() {
+		mraid.createCalendarEvent({ description: "End of World", location: "everywhere", start: "2013-01-21T00:00-05:00", end: "2013-01-22" });
+	}
+	
+	// no description
+	function calendar4() {
+		mraid.createCalendarEvent({ location: "everywhere", start: "2013-01-21T00:00-05:00", end: "2013-01-22T00:00-05:00" });
+	}
+	
+	// no start time
+	function calendar5() {
+		mraid.createCalendarEvent({ description: "End of World", location: "everywhere" });
+	}
+	
+	// valid transparency
+	function calendar6() {
+		mraid.createCalendarEvent({ transparency: "opaque", description: "End of World", location: "everywhere", start: "2013-01-21T00:00-05:00", end: "2013-01-22T00:00-05:00" });
+	}
+	
+	// invalid transparency
+	function calendar7() {
+		mraid.createCalendarEvent({ transparency: "bla", description: "End of World", location: "everywhere", start: "2013-01-21T00:00-05:00", end: "2013-01-22T00:00-05:00" });
+	}
+	
+	// valid recurrence
+	function calendar8() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00", 
+									recurrence: {
+										frequency: "daily",
+										interval: 2
+									} 
+								});
+	}
+	
+	// invalid recurrence frequency
+	/*function calendar8() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00", 
+									recurrence: {
+										frequency: "bla",
+										interval: 10
+									} 
+								});
+	}*/
+	
+	// invalid recurrence interval
+	function calendar9() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00", 
+									recurrence: {
+										frequency: "daily",
+										interval: "string"
+									} 
+								});
+	}
+	
+	// valid recurrence weekly interval
+	function calendar10() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00",
+									summary: "this is summary",
+									recurrence: {
+										frequency: "weekly",
+										interval: 2,
+										daysInWeek: [0, 6]
+									}
+								});
+	}
+	
+	// valid recurrence monthly interval
+	function calendar11() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00",
+									summary: "this is summary",
+									recurrence: {
+										frequency: "monthly",
+										interval: 2,
+										daysInMonth: [30, 6, -5, 2]
+									}
+								});
+	}
+	
+	// valid recurrence yearly interval
+	function calendar12() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00",
+									summary: "this is summary",
+									recurrence: {
+										frequency: "yearly",
+										daysInYear: [200, 30, 6, -5, 2, -365],
+										monthsInYear: [1,5,12,12,12,12]
+									}
+								});
+		}
+		
+		// invalid recurrence yearly interval
+	function calendar13() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00",
+									summary: "this is summary",
+									recurrence: {
+										frequency: "yearly",
+										interval: 10,
+										daysInYear: [200, 30, 6, -5, 2, -365],
+										monthsInYear: [1,5,12,90]
+									}
+								});
+		}
+		
+		
+	// valid transparency
+	function calendar14() {
+		mraid.createCalendarEvent({ transparency: "transparent", description: "End of World", location: "everywhere", start: "2013-04-17T00:00-05:00", end: "2014-04-17T00:00-05:00" });
+	}
+	
+	// valid recurrence
+	function calendar15() {
+		mraid.createCalendarEvent({ description: "End of World",
+									location: "everywhere", 
+									start: "2013-01-21T00:00-05:00", 
+									end: "2013-01-22T00:00-05:00", 
+									recurrence: {
+										frequency: "monthly",
+										daysInMonth: [-1]
+									} 
+								});
+	}
+	
+</script>
+</head>
+<body>
+
+<div id="asdf" style="background-color: #00ff00; height: 50px;">
+	<a href="#" onclick="calendar1(); return false;">Calendar1</a> / <a href="#" onclick="calendar2(); return false;">Calendar2</a> / 
+	<a href="#" onclick="calendar3(); return false;">Calendar3</a> / <a href="#" onclick="calendar4(); return false;">Calendar4</a> / 
+	<a href="#" onclick="calendar5(); return false;">Calendar5</a> / <a href="#" onclick="calendar6(); return false;">Calendar6</a> / 
+	<a href="#" onclick="calendar7(); return false;">Calendar7</a> / <a href="#" onclick="calendar8(); return false;">Calendar8</a> / 
+	<a href="#" onclick="calendar9(); return false;">Calendar9</a> / <a href="#" onclick="calendar10(); return false;">Calendar10</a> / 
+	<a href="#" onclick="calendar11(); return false;">Calendar11 - monthly</a> / 
+	<a href="#" onclick="calendar12(); return false;">Calendar12 - yearly</a> / 
+	<a href="#" onclick="calendar13(); return false;">Calendar13 - yearly invalid</a> / 
+	<a href="#" onclick="calendar14(); return false;">Calendar14 - transparent</a> / 
+	<a href="#" onclick="calendar15(); return false;">Calendar15</a>
+	<hr />
+	<a href="#" onclick="mraid.playVideo('http://10.10.1.198:6789/verve/mraid/android_480x272.mp4');return false;">Play video 1</a> / 
+	<a href="#" onclick="mraid.playVideo('http://video2/');return false;">Play video 2 (invalid url)</a>
+	<hr />
+	<b>Sms: </b><span id="sms"></span><a href="sms:12345">-- link --</a><br />
+	<b>Tel: </b><span id="tel"></span><a href="tel:12345">-- link --</a><br />
+	<b>Calendar: </b><span id="calendar"></span><br />
+	<b>Store picture: </b><span id="storePicture"></span><a onclick="mraid.storePicture('http://10.10.1.198:6789/verve/mraid/redirect_image.php'); return false;">-- store pict. --</a><br />
+	<b>Inline video: </b><span id="inlineVideo"></span><br />
+</div>
+
+<script type="text/javascript">
+console.log("javascript started executing")
+
+if (mraid.getState() === 'loading') {
+	mraid.addEventListener('ready', function() {
+		onReady();
+	});
+} else {
+	onReady();
+}
+</script>
+
+</body>
+</html>

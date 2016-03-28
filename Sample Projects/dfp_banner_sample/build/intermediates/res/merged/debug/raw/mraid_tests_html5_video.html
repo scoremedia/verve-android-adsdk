@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, height=50">
+<style type="text/css">
+	body { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; background-color: transparent; }
+	div.adwrapper { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; }
+</style>
+
+<script type="text/javascript">
+
+function openGoogle() {
+	var obj = {useCustomClose:false,width: 300,height: 200};
+	mraid.setExpandProperties(obj);
+	mraid.expand();
+	//mraid.expand('http://10.10.1.198:6789/verve/mraid/html5_video.html');
+	
+	/*var obj = {width: 300,height: 200,offsetX:0,offsetY:-9999,customClosePosition:"top-left",allowOffscreen:false};
+	mraid.setResizeProperties(obj);
+	mraid.resize();*/
+}
+
+function test() {
+	var videos = document.getElementsByTagName("video");
+	console.log("videos: " + videos.length);
+	if (videos[0].hasAttribute("controls")) {
+		//videos[0].removeAttribute("controls");
+	}
+}
+
+function testPlay() {
+	var videos = document.getElementsByTagName("video");
+	console.log("play videos: " + videos.length);
+	if (videos[0].hasAttribute("controls")) {
+		videos[0].play();
+	}
+}
+
+function testResetControls() {
+	var videos = document.getElementsByTagName("video");
+	console.log("play videos: " + videos.length);
+	if (videos[0].hasAttribute("controls")) {
+		videos[0].removeAttribute("controls");
+		videos[0].setAttribute("controls", "controls");
+	}
+}
+
+</script>
+
+</head>
+<body onload="test();">
+	<script src="mraid.js"></script>
+	<div id="asdf" style="background-color: #ffffff; height: 50px;" onclick="openGoogle();">
+		open video
+	</div>
+	
+	<video width="320" height="240" controls>
+		<source src="http://broken-links.com/tests/media/BigBuck.m4v" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	
+	<hr />
+	
+	<video width="320" height="240" controls>
+		<source src="http://broken-links.com/tests/media/BigBuck.m4v" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	
+	<hr />
+	
+	<video width="320" height="240" controls>
+		<source src="http://broken-links.com/tests/media/BigBuck.m4v" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	
+</body>
+</html>

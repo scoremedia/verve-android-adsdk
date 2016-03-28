@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, height=50">
+<style type="text/css">
+	body { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; background-color: transparent; }
+	div.adwrapper { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; }
+</style>
+
+<script type="text/javascript">
+		
+	// should resize
+	function test1() {
+		var max = mraid.getMaxSize();
+		
+		var obj = { width: max.width / 2, height: max.height / 2, offsetX:-9999,offsetY:-2090, customClosePosition:"top-right", allowOffscreen:false };
+		mraid.setResizeProperties(obj);
+		mraid.resize();
+	}
+	
+	// should resize
+	function test2() {
+		var max = mraid.getMaxSize();
+		
+		var obj = { width: max.width / 2, height: max.height / 2, offsetX:-(max.width / 4),offsetY:-(max.height / 2), customClosePosition:"top-right", allowOffscreen:true };
+		mraid.setResizeProperties(obj);
+		mraid.resize();
+	}
+	
+	// throw error that close region is not visible
+	function test3() {
+		var max = mraid.getMaxSize();
+		
+		var obj = { width: max.width + 50, height: max.height + 50, offsetX: 0,offsetY:-(max.height / 2), customClosePosition:"top-right", allowOffscreen:false };
+		mraid.setResizeProperties(obj);
+		mraid.resize();
+	}
+	
+	// should resize
+	function test4() {
+		var max = mraid.getMaxSize();
+		
+		var obj = { width: max.width + 50, height: max.height + 50, offsetX: 0,offsetY:-(max.height / 2), customClosePosition:"top-left", allowOffscreen:false };
+		mraid.setResizeProperties(obj);
+		mraid.resize();
+	}
+	
+	
+</script>
+<script type="text/javascript" src="file:///android_asset/expand_handler.js"></script>
+</head>
+<body>
+<div align="center" class="adwrapper">
+
+<div id="asdf" style="background-color: #00ff00; height: 50px;">
+	<a href="#" onclick="test1(); return false;">Test 1</a> / 
+	<a href="#" onclick="test2(); return false;">Test 2</a> / 
+	<a href="#" onclick="test3(); return false;">Test 3</a> / 
+	<a href="#" onclick="test4(); return false;">Test 4</a>
+</div>
+
+</div>
+</body>
+</html>

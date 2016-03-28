@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_ad_background">#C8000000</color>
+    <declare-styleable name="AdView"><attr format="string" name="base_url"/><attr format="string" name="ad_keyword"/><attr name="ad_size"><enum name="BANNER" value="0"/><enum name="TABLET_BANNER" value="1"/><enum name="TABLET_RECTANGLE" value="2"/><enum name="MEDIUM_RECTANGLE" value="3"/></attr></declare-styleable>
+    <item name="inter_nav_menu" type="id"/>
+    <item name="interstitial_ad_view" type="id"/>
+    <item name="sample_video_player" type="id"/>
+    <item name="splash_ad_view" type="id"/>
+    <item name="video_ad_ui_container" type="id"/>
+    <string name="app_name">Verve_AdSDK</string>
+    <style name="SplashAdActivity" parent="Theme.Transparent"/>
+    <style name="Theme.Transparent" parent="android:Theme">
+	    <item name="android:windowIsTranslucent">true</item>
+	    <item name="android:windowBackground">@android:color/transparent</item>
+	    <item name="android:windowContentOverlay">@null</item>
+	    <item name="android:windowNoTitle">true</item>
+	    <item name="android:windowIsFloating">true</item>
+	    <item name="android:backgroundDimEnabled">false</item>
+	</style>
+</resources>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, height=50">
+<style type="text/css">
+	body { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; background-color: transparent; }
+	div.adwrapper { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; }
+</style>
+
+<script type="text/javascript">
+function openGoogle() {
+	var obj = {width:200,height:300,useCustomClose:false,isModal:true};
+	mraid.setExpandProperties(obj);
+	mraid.setOrientationProperties ({"allowOrientationChange":false, "forceOrientation":"landscape"});
+	
+	mraid.expand('http://www.google.com/');
+}
+
+function changeOrientationSettings() {
+	mraid.setOrientationProperties({"allowOrientationChange":true});
+}
+
+function changeOrientationSettings2() {
+	mraid.setOrientationProperties({"allowOrientationChange":false, "forceOrientation":"none"});
+}
+
+function changeOrientationSettings3() {
+	mraid.setOrientationProperties({"forceOrientation":"portrait"});
+}
+
+function mailT() {
+	mraid.open('mailto:http://www.google.si/');	
+}
+
+</script>
+
+</head>
+<body>
+	<script src="mraid.js"></script>
+	<div id="asdf" style="background-color: #ffffff; height: 50px;" onclick="openGoogle();">
+		expand new browser  
+	</div>
+	
+	<a href="#" onclick="changeOrientationSettings();return false">Allow orientation</a><br />
+	<a href="#" onclick="changeOrientationSettings2();return false">Lock to current orientation</a><br />
+	<a href="#" onclick="changeOrientationSettings3();return false">Lock to portrait orientation</a><br />
+	<a href="#" onclick="mailT();return false">MAILTO test</a>
+</body>
+</html>

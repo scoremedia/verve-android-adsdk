@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.7" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/master_sample_application" />
+            <option value="$PROJECT_DIR$/../Verve Integration/VRV-moat-mobile-app-kit-1.2.3" />
+            <option value="$PROJECT_DIR$/../Verve Integration/Verve_AdSDK_3.0.1" />
+            <option value="$PROJECT_DIR$/../Verve Integration/verve_import" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

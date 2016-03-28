@@ -1,0 +1,121 @@
+<html style="background-color:transparent;">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+</head>
+<body style="margin:0; padding:0; width:auto; -webkit-user-select:none; -webkit-touch-callout:none;">
+<script src="mraid.js"></script>
+<style type="text/css">
+        #demoAd {
+                height: 100%;
+                margin-right: 10px;
+                overflow: auto;
+        }
+        #demoAd a {
+                font-family: sans-serif;
+                font-size: 8pt;
+                width: 50px;
+                height: 50px;
+                display: block;
+                float: left;
+                text-align: center;
+                padding: 5px;
+                margin: 1px;
+                border: 1px solid blue;
+                text-decoration: none;
+                color: blue;
+        }
+</style>
+<script type="text/javascript">
+        function showProperties() {
+                var props = JSON.stringify(mraid.getAllProperties(), undefined, 4);
+                console.debug(props);
+                //alert(props);
+        }
+        
+        function expand(fullScreen, withUrl) {
+                mraid.setExpandProperties({
+                        width: fullScreen ? -1 : 300,
+                        height: fullScreen ? -1 : 350
+                });
+
+                // if withUrl is true then the expanded ad is a separate 
+                // creative, and we use this same ad as that creative
+                mraid.expand(withUrl ? "http://dl.dropbox.com/u/5671499/mraid/demo.xml" : null);
+        }
+
+        function resize() {
+                mraid.setResizeProperties({
+                        width: 200,
+                        height: 100,
+                        //customClosePosition : "top-left"
+                    //offsetX: -10,
+                    //offsetY: 30,
+                    //allowOffscreen: false,
+                });
+
+                mraid.resize();
+        }
+
+        var useDefaultOrientationProperties = true;
+        function toggleOrientationProperties() {
+                useDefaultOrientationProperties = !useDefaultOrientationProperties;
+
+                mraid.setOrientationProperties({ 
+                        allowOrientationChange: useDefaultOrientationProperties ? true : false,
+                        forceOrientation: useDefaultOrientationProperties ? "none" : "portrait"
+                });
+
+                var properties = mraid.getOrientationProperties();
+
+                alert("Orientation locked: " + properties.forceOrientation);
+        }
+
+        function createCalendarEvent() {                
+                 mraid.createCalendarEvent({ description: "End of World", location: "everywhere", start: "2013-01-21T00:00-05:00", end: "2013-01-22T00:00-05:00" });
+        }
+
+        var customClose = false;
+        function toggleCustomClose() {
+                customClose = !customClose;
+                mraid.useCustomClose(customClose);
+                alert("Custom close " + (customClose ? "enabled" : "disabled"));
+        }
+
+        mraid.addEventListener("ready", function() {
+            console.debug("adReady");
+          });
+
+        mraid.addEventListener("stateChange", function(state) {
+            console.debug("stateChange: " + state);
+          });
+
+          mraid.addEventListener("viewableChange", function(isViewable) {
+            console.debug("viewableChange: " + (isViewable ? "true" : "false"));
+          });
+        
+        mraid.addEventListener("sizeChange", function(width, height) {
+            console.debug("sizeChange: " + width + "x" + height);
+          });
+
+          mraid.addEventListener("error", function(message, action) {
+                  console.error("error: " + action + " - " + message);
+          });
+</script>
+	<div id="demoAd">
+		<a href="javascript: expand(true, false)">expand full screen</a>
+		<a href="javascript: expand(false, false)">expand part screen</a>
+		<a href="javascript: expand(true, true)">expand full screen with url</a>
+		<a href="javascript: expand(false, true)">expand part screen with url</a>
+		<a href="javascript: resize()">resize</a>
+		<a href="javascript: mraid.close()">close</a>
+		<a href="javascript: toggleOrientationProperties()">toggle orientation properties</a>
+		<a href="javascript: toggleCustomClose()">toggle custom close</a>
+		<a href="javascript: showProperties()">properties</a>
+		<a href="javascript: mraid.open('http://news.ycombinator.com')">open</a>
+		<a href="javascript: mraid.storePicture('http://www.iab.net/media/image/new-iab-logo.gif')">store picture</a>
+		<a href="javascript: mraid.playVideo('http://media.w3.org/2010/05/sintel/trailer.mp4')">play video</a>
+		<a href="javascript: createCalendarEvent()">create calendar event</a>
+	</div>
+</body>
+</html>

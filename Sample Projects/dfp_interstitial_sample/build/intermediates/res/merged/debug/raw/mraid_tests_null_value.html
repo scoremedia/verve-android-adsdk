@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, height=50">
+<style type="text/css">
+	body { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; background-color: transparent; }
+	div.adwrapper { margin: 0px; padding: 0px; max-height: 50px !important; overflow: hidden; }
+</style>
+
+<script type="text/javascript">
+
+function test() {
+	var emptyString;
+	mraid.expand(emptyString);
+}
+
+</script>
+
+</head>
+<body>
+<div align="center" class="adwrapper">
+
+<div id="asdf" style="background-color: #00ff00; height: 50px;">
+	<a href="#" onclick="mraid.expand(null); return false;">TEST 1</a> / 
+	<a href="#" onclick="test(); return false;">TEST 2</a> / 
+	<a href="#" onclick="mraid.expand(''); return false;">TEST 3</a> /
+	<a href="#" onclick="mraid.expand('http://www.google.com/'); return false;">TEST 4</a>
+</div>
+
+</div>
+</body>
+</html>
