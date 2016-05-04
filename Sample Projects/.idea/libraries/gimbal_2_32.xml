@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="gimbal_2.32">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../Verve Integration/verve_import/libs/gimbal_2.32.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

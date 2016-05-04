@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- From: file:/Users/alex/v2.5/android/MoatMobileAppKit/moat-mobile-app-kit/build/generated/res/resValues/releaseSolo/values/generated.xml -->
-    <eat-comment/>
-    <string name="mmak_namespace_code">VRV</string>
-    <string name="mmak_revision">3edaeb6</string>
-</resources>

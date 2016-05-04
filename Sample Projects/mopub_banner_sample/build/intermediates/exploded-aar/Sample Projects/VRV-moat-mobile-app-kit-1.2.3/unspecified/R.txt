@@ -1,2 +1,0 @@
-int string mmak_namespace_code 0x7f020000
-int string mmak_revision 0x7f020001
