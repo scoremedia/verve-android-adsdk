@@ -1,2 +1,0 @@
-configurations.create("default")
-artifacts.add("default", file('Verve_AdSDK_3.0.2.aar'))
