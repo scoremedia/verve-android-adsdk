@@ -268,7 +268,7 @@ public class VerveSample extends Activity {
 		 * ACCESS_FINE_LOCATION
 		 */
         // set request timeout in milliseconds
-        mSplashAd.setTimeout(1500);
+        mSplashAd.setTimeout(3000);
 
         // set ad display duration in milliseconds
         mSplashAd.setDuration(4000);
@@ -282,7 +282,7 @@ public class VerveSample extends Activity {
         * verve_tablet_splash_land - tablet landscape
         *
         */
-        mSplashAd.setShowSplashImage(true);
+        mSplashAd.setShowSplashImage(false);
 
         mSplashAd.requestAd(createAdRequest());
     }

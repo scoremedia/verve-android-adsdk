@@ -5,6 +5,7 @@
 
     <string name="verve">Verve</string>
     <string name="verve_sdk_samples">Verve SDK Samples</string>
+    <string name="verve_inline_sample">Verve Inline Ad Sample</string>
     <string name="buttonRefresh">Refresh Banner Ad</string>
     <string name="buttonRefreshRectangle">Refresh Rectangle Ad</string>
     <string name="buttonInterstitialAd">Show Interstitial Ad</string>

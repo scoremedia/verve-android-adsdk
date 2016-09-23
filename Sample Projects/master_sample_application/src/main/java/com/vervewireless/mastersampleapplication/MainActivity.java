@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
         items.add(new SampleItem(getString(R.string.verve)));
         items.add(new SampleItem(VerveSample.class, getString(R.string.verve_sdk_samples)));
         items.add(new SampleItem(SplashManagerSample.class, getString(R.string.splash_manager_sample)));
+        items.add(new SampleItem(VerveInlineSample.class, getString(R.string.verve_inline_sample)));
         // Dfp
         items.add(new SampleItem(getString(R.string.dfp)));
         items.add(new SampleItem(DfpBannerSample.class, getString(R.string.dfp_banner_sample)));
