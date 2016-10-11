@@ -22,7 +22,7 @@ dependencies {
     compile project(':verve_import')
     // Only needed for MoPub
     // Begin MoPub Requirenments
-    compile('com.mopub:mopub-sdk:3.10.0@aar') {
+    compile('com.mopub:mopub-sdk:4.9.0@aar') {
         transitive = true
     }
     // End MoPub

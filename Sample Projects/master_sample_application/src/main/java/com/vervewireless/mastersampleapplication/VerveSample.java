@@ -112,6 +112,11 @@ public class VerveSample extends Activity {
             public void onNoAdReturned() {
                 Log.d(TAG, "InterstitialAd No Fill");
             }
+
+            @Override
+            public void onAdClosed() {
+                Log.d(TAG, "InterstitialAd closed");
+            }
         });
 
         Button buttonInterstitialAd = (Button) findViewById(R.id.buttonInterstitial);
