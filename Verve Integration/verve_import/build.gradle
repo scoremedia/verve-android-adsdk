@@ -48,5 +48,5 @@ dependencies {
     //GSON
     compile 'com.google.code.gson:gson:2.6.2'
     //AdSDK
-    compile project(':Verve_AdSDK_3.2.4')
+    compile project(':Verve_AdSDK_3.2.5')
 }

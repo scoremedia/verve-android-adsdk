@@ -9,5 +9,5 @@ project(':VRV-moat-mobile-app-kit-1.7.6').projectDir = file('../Verve Integratio
 include ':Roximity-sdk-2.0.25'
 project(':Roximity-sdk-2.0.25').projectDir = file('../Verve Integration/Roximity-sdk-2.0.25')
 
-include ':Verve_AdSDK_3.2.4'
-project(':Verve_AdSDK_3.2.4').projectDir = file('../Verve Integration/Verve_AdSDK_3.2.4')
+include ':Verve_AdSDK_3.2.5'
+project(':Verve_AdSDK_3.2.5').projectDir = file('../Verve Integration/Verve_AdSDK_3.2.5')
