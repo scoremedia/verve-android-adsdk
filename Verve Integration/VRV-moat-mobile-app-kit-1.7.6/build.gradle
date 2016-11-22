@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('VRV-moat-mobile-app-kit-1.7.6.aar'))

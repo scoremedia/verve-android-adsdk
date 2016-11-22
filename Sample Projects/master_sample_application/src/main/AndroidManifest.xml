@@ -19,6 +19,7 @@
 
         <activity android:name=".VerveSample"/>
         <activity android:name=".SplashManagerSample"/>
+        <activity android:name=".VerveInlineSample"/>
 
         <activity android:name=".dfp.DfpBannerSample"/>
         <activity android:name=".dfp.DfpInterstitialSample"/>

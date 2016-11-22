@@ -37,12 +37,16 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:8.4.0'
     //ALTBEACON
     compile 'org.altbeacon:android-beacon-library:2.6.1'
-    //GIMBAL
-    compile project(':gimbal_import')
+    //ROXIMITY
+    compile project(':Roximity-sdk-2.0.25')
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'org.slf4j:slf4j-api:1.7.10'
     //MOAT
-    compile project(':VRV-moat-mobile-app-kit-1.2.3')
+    compile project(':VRV-moat-mobile-app-kit-1.7.6')
+	//IAS
+	compile fileTree(dir: 'libs', include: ['*.jar'])
     //GSON
     compile 'com.google.code.gson:gson:2.6.2'
     //AdSDK
-    compile project(':Verve_AdSDK_3.1.1')
+    compile project(':Verve_AdSDK_3.2.5')
 }

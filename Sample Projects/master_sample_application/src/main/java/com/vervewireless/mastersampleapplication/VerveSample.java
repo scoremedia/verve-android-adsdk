@@ -112,6 +112,11 @@ public class VerveSample extends Activity {
             public void onNoAdReturned() {
                 Log.d(TAG, "InterstitialAd No Fill");
             }
+
+            @Override
+            public void onAdClosed() {
+                Log.d(TAG, "InterstitialAd closed");
+            }
         });
 
         Button buttonInterstitialAd = (Button) findViewById(R.id.buttonInterstitial);
@@ -268,7 +273,7 @@ public class VerveSample extends Activity {
 		 * ACCESS_FINE_LOCATION
 		 */
         // set request timeout in milliseconds
-        mSplashAd.setTimeout(1500);
+        mSplashAd.setTimeout(3000);
 
         // set ad display duration in milliseconds
         mSplashAd.setDuration(4000);
@@ -282,7 +287,7 @@ public class VerveSample extends Activity {
         * verve_tablet_splash_land - tablet landscape
         *
         */
-        mSplashAd.setShowSplashImage(true);
+        mSplashAd.setShowSplashImage(false);
 
         mSplashAd.requestAd(createAdRequest());
     }

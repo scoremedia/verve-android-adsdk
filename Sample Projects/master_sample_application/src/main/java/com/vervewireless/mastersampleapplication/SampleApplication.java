@@ -1,6 +1,7 @@
 package com.vervewireless.mastersampleapplication;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.vervewireless.advert.Category;
 import com.vervewireless.advert.LocationPermissionDelegate;
@@ -19,14 +20,14 @@ public class SampleApplication extends Application {
     }
 
     private void initVerveAdSDK() {
-        VerveAdSDK.initialize(this, new VerveAdSDK.InitializationListener() {
+        VerveAdSDK.initialize(this, MY_AD_KEYWORD, new VerveAdSDK.InitializationListener() {
             @Override
             public void onInitialized(VerveAdSDK verveAdSDK) {
                 // you can modify the VerveAdSDK object after the initialization had finished
                 // e.g. configure permission delegates or Splash Manager...
                 SplashAdManager splashAdManager = SplashAdManager.instance();
                 splashAdManager.setAdKeyword(MY_AD_KEYWORD);
-                splashAdManager.setCategory(Category.HOME_PAGE);
+                splashAdManager.setCategory(Category.NEWS_AND_INFORMATION);
                 // Show provided Splash Image on app startup
                 /*
                 * Images must be named correctly
@@ -65,6 +66,9 @@ public class SampleApplication extends Application {
                         return true;
                     }
                 });
+
+                // Enable logging, possible values Log.INFO, Log.WARN, Log.ERROR (default)
+                verveAdSDK.setLogPrintLevel(Log.INFO);
             }
         });
 

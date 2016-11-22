@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:verve="http://schemas.android.com/apk/res-auto">
+
+    <com.vervewireless.advert.VerveWebView
+        android:id="@+id/verveWebView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        verve:ad_keyword="adsdkexample"
+        verve:animate="true"
+        verve:wait_for_user_viewport="true"
+        verve:ad_placement="60" />
+
+</RelativeLayout>
