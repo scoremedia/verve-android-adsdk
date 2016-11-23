@@ -40,7 +40,6 @@ dependencies {
     //ROXIMITY
     compile project(':Roximity-sdk-2.0.25')
     compile 'com.loopj.android:android-async-http:1.4.9'
-    compile 'org.slf4j:slf4j-api:1.7.10'
     //MOAT
     compile project(':VRV-moat-mobile-app-kit-1.7.6')
 	//IAS
