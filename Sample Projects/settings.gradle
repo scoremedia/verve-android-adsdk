@@ -6,8 +6,8 @@ project(':verve_import').projectDir = file('../Verve Integration/verve_import')
 include ':VRV-moat-mobile-app-kit-1.7.6'
 project(':VRV-moat-mobile-app-kit-1.7.6').projectDir = file('../Verve Integration/VRV-moat-mobile-app-kit-1.7.6')
 
-include ':Roximity-sdk-2.0.25'
-project(':Roximity-sdk-2.0.25').projectDir = file('../Verve Integration/Roximity-sdk-2.0.25')
+include ':Roximity-sdk-2.0.29'
+project(':Roximity-sdk-2.0.29').projectDir = file('../Verve Integration/Roximity-sdk-2.0.29')
 
-include ':Verve_AdSDK_3.2.5'
-project(':Verve_AdSDK_3.2.5').projectDir = file('../Verve Integration/Verve_AdSDK_3.2.5')
+include ':Verve_AdSDK_3.2.6'
+project(':Verve_AdSDK_3.2.6').projectDir = file('../Verve Integration/Verve_AdSDK_3.2.6')

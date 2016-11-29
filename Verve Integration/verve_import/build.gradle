@@ -28,6 +28,10 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     //AdSDK requires
     compile 'com.android.support:support-v4:22.2.1'
@@ -38,7 +42,7 @@ dependencies {
     //ALTBEACON
     compile 'org.altbeacon:android-beacon-library:2.6.1'
     //ROXIMITY
-    compile project(':Roximity-sdk-2.0.25')
+    compile project(':Roximity-sdk-2.0.29')
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'org.slf4j:slf4j-api:1.7.10'
     //MOAT
@@ -46,7 +50,7 @@ dependencies {
 	//IAS
 	compile fileTree(dir: 'libs', include: ['*.jar'])
     //GSON
-    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.google.code.gson:gson:2.8.0'
     //AdSDK
-    compile project(':Verve_AdSDK_3.2.5')
+    compile project(':Verve_AdSDK_3.2.6')
 }
