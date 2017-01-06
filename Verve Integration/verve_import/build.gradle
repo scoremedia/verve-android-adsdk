@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -19,13 +19,6 @@ android {
             debuggable true
         }
     }
-
-    packagingOptions {
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-    }
 }
 
 repositories {
@@ -34,15 +27,15 @@ repositories {
 
 dependencies {
     //AdSDK requires
-    compile 'com.android.support:support-v4:22.2.1'
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.android.support:recyclerview-v7:22.2.1'
-    compile 'com.google.android.gms:play-services-ads:8.4.0'
-    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.google.android.gms:play-services-ads:10.0.1'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
     //ALTBEACON
-    compile 'org.altbeacon:android-beacon-library:2.6.1'
+    compile 'org.altbeacon:android-beacon-library:2.9.2'
     //ROXIMITY
-    compile project(':Roximity-sdk-2.0.29')
+    compile project(':Roximity-sdk-2.0.39')
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'org.slf4j:slf4j-api:1.7.10'
     //MOAT
@@ -52,5 +45,8 @@ dependencies {
     //GSON
     compile 'com.google.code.gson:gson:2.8.0'
     //AdSDK
-    compile project(':Verve_AdSDK_3.2.6')
+    compile project(':Verve_AdSDK_3.3.0')
+    //DV
+    compile project(':DoubleVerify-1.5.6.7')
+    compile 'com.android.volley:volley:1.0.0'
 }

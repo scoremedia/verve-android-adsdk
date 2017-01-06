@@ -27,13 +27,7 @@ public class MoPubInterstitialSample extends Activity {
 	private static final String LOG_TAG = "MoPubInterstitialSample";
 
 	//update this value with your MoPub Ad Unit ID
-	private static final String MY_AD_UNIT_ID = "";
-
-	/** Button text values for the interstitial show button. */
-	private static final String TEXT_NOT_READY = "Interstitial Not Ready";
-	private static final String TEXT_LOADING = "Loading Interstitial...";
-	private static final String TEXT_SHOW = "Show Interstitial";
-	private static final String TEXT_FAILED_TO_LOAD = "Ad Failed to Load";
+	private static final String MY_AD_UNIT_ID = "81f07c7c654649658cd3548d15fd4cd3";
 
 	/** The interstitial ad. */
 	private MoPubInterstitial interstitialAd;
@@ -45,8 +39,7 @@ public class MoPubInterstitialSample extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.mopub_interstitial_sample);
-
+		setContentView(R.layout.interstitial_sample);
 		setTitle(R.string.mopub_interstitial_sample);
 
 		// Create an ad.
@@ -56,20 +49,20 @@ public class MoPubInterstitialSample extends Activity {
 		interstitialAd.setInterstitialAdListener(new SampleListener());
 		
 		showButton = (Button) findViewById(R.id.showButton);
-		showButton.setText(TEXT_NOT_READY);
+		showButton.setText(R.string.ad_not_ready);
 		showButton.setEnabled(false);
 	}
 
 	/** Called when the "Load Interstitial" button is clicked. */
-	public void loadInterstitial(View unusedview) {
+	public void loadInterstitial(View unusedView) {
 		// Disable the show button until the new ad is loaded.
-		showButton.setText(TEXT_LOADING);
+		showButton.setText(R.string.ad_loading);
 		showButton.setEnabled(false);
 		
 		MoPubExtras mopubExtras = new MoPubExtras();
 		mopubExtras.setCategory(Category.NEWS_AND_INFORMATION);
 
-		Map<String, Object> localExtras = new HashMap<String, Object>();
+		Map<String, Object> localExtras = new HashMap<>();
 		localExtras.put(VerveExtras.EXTRAS_LABEL, mopubExtras);
 		
 		interstitialAd.setLocalExtras(localExtras);
@@ -77,7 +70,7 @@ public class MoPubInterstitialSample extends Activity {
 	}
 
 	/** Called when the "Show Interstitial" button is clicked. */
-	public void showInterstitial(View unusedview) {
+	public void showInterstitial(View unusedView) {
 		// Show the interstitial if it's loaded.
 		if (interstitialAd.isReady()) {
 			interstitialAd.show();
@@ -86,7 +79,7 @@ public class MoPubInterstitialSample extends Activity {
 		}
 		
 		// Disable the show button until another interstitial is loaded.
-		showButton.setText(TEXT_NOT_READY);
+		showButton.setText(R.string.ad_not_ready);
 		showButton.setEnabled(false);
 	}
 
@@ -108,7 +101,7 @@ public class MoPubInterstitialSample extends Activity {
 			Toast.makeText(MoPubInterstitialSample.this, "onInterstitialLoaded", Toast.LENGTH_SHORT).show();
 			
 			// Change the button text and enable the show button.
-			showButton.setText(TEXT_SHOW);
+			showButton.setText(R.string.show_interstitial);
 			showButton.setEnabled(true);
 		}
 
@@ -120,7 +113,7 @@ public class MoPubInterstitialSample extends Activity {
 			Toast.makeText(MoPubInterstitialSample.this, message, Toast.LENGTH_SHORT).show();
 			
 			// Change the button text and disable the show button.
-			showButton.setText(TEXT_FAILED_TO_LOAD);
+			showButton.setText(R.string.ad_failed);
 			showButton.setEnabled(false);
 		}
 

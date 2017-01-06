@@ -17,16 +17,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".VerveSample"/>
-        <activity android:name=".SplashManagerSample"/>
-        <activity android:name=".VerveInlineSample"/>
+        <activity android:name=".verve.VerveSample"/>
+        <activity android:name=".verve.VerveSplashManagerSample"/>
+        <activity android:name=".verve.VerveRectangleSample"/>
 
         <activity android:name=".dfp.DfpBannerSample"/>
         <activity android:name=".dfp.DfpInterstitialSample"/>
+        <activity android:name=".dfp.DfpRectangleSample"/>
 
         <activity android:name=".mopub.MoPubBannerSample"/>
         <activity android:name=".mopub.MoPubInterstitialSample"/>
+        <activity android:name=".mopub.MoPubRectangleSample"/>
 
+        <activity android:name=".appnexus.AppNexusBannerSample"/>
+        <activity android:name=".appnexus.AppNexusRectangleSample"/>
+        <activity android:name=".appnexus.AppNexusInterstitialSample"/>
 
         <!--Only needed for MoPub-->
         <!--Start MoPub Activities-->

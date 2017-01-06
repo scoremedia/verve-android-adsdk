@@ -67,7 +67,7 @@ public class SampleApplication extends Application {
                     }
                 });
 
-                // Enable logging, possible values Log.INFO, Log.WARN, Log.ERROR (default)
+                // Enable logging, possible values Log.INFO (default), Log.WARN, Log.ERROR
                 verveAdSDK.setLogPrintLevel(Log.INFO);
             }
         });

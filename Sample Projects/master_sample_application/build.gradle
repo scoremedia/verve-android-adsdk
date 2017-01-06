@@ -1,19 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
 
     defaultConfig {
         applicationId "com.vervewireless.mastersampleapplication"
         minSdkVersion 14
-        targetSdkVersion 23
-        versionCode 3
-        versionName "2.0"
+        targetSdkVersion 25
+        versionCode 5
+        versionName "3.0"
     }
     buildTypes {
         release {
             minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
         }
     }
 }
@@ -21,9 +22,12 @@ android {
 dependencies {
     compile project(':verve_import')
     // Only needed for MoPub
-    // Begin MoPub Requirenments
-    compile('com.mopub:mopub-sdk:4.9.0@aar') {
+    // Begin MoPub Requirements
+    compile('com.mopub:mopub-sdk:4.11.0@aar') {
         transitive = true
     }
     // End MoPub
+
+    //AppNexus
+    compile 'com.appnexus.opensdk:appnexus-sdk:2.15.1'
 }

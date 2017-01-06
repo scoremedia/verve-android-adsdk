@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Verve Sample Application</string>
+    <!-- Button text -->
     <string name="refresh">Refresh</string>
     <string name="load_interstitial">Load Interstitial</string>
+    <string name="show_interstitial">Show Interstitial</string>
+    <string name="ad_not_ready">Interstitial Not Ready</string>
+    <string name="ad_loading">Loading Interstitial…</string>
+    <string name="ad_failed">Ad Failed to Load</string>
 
     <string name="verve">Verve</string>
     <string name="verve_sdk_samples">Verve SDK Samples</string>
@@ -21,14 +26,22 @@
     <string name="duration">Duration [msec]</string>
     <string name="interval">Interval [msec]</string>
     <string name="splash_manager_settings">SPLASH MANAGER SETTINGS</string>
-
+    <string name="checkBox_autoRefresh">Auto-Refresh</string>
+    <!-- DFP -->
     <string name="dfp">Dfp</string>
     <string name="dfp_banner_sample">Dfp Banner Sample</string>
     <string name="dfp_interstitial_sample">Dfp Interstitial Sample</string>
-
+    <string name="dfp_rectangle_sample">Dfp Rectangle Sample</string>
+    <!-- MoPub -->
     <string name="mopub">MoPub</string>
     <string name="mopub_banner_sample">MoPub Banner Sample</string>
     <string name="mopub_interstitial_sample">MoPub Interstitial Sample</string>
+    <string name="mopub_rectangle_sample">MoPub Rectangle Sample</string>
+    <!-- App Nexus -->
+    <string name="appnexus">AppNexus</string>
+    <string name="appnexus_banner_sample">AppNexus Banner Sample</string>
+    <string name="appnexus_interstitial_sample">AppNexus Interstitial Sample</string>
+    <string name="appnexus_rectangle_sample">AppNexus Rectangle Sample</string>
 
     <!--Uncomment this if you want to show Permission Explanation dialogs -->
     <!--title is optional -->

@@ -8,10 +8,10 @@ import com.google.android.gms.ads.AdRequest;
 /**
  * An {@link AdListener} that logs ad events.
  */
-public class LoggingAdListener extends AdListener {
+class LoggingAdListener extends AdListener {
 
 	/** The log tag. */
-	public static final String LOG_TAG = "DfpBannerSample";
+	private static final String LOG_TAG = "DfpBannerSample";
 
 	/** Called when an ad is loaded. */
 	@Override

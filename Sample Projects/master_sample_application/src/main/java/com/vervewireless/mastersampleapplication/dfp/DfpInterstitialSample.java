@@ -14,11 +14,12 @@ import com.google.android.gms.ads.doubleclick.PublisherAdRequest.Builder;
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
 import com.vervewireless.advert.Category;
 import com.vervewireless.advert.mediation.DFPExtras;
+import com.vervewireless.advert.mediation.VWDFPCustomEventInterstitial_Android;
 import com.vervewireless.advert.mediation.VerveCustomEventInterstitial;
 import com.vervewireless.mastersampleapplication.R;
 
 /**
- * An {@link Activity} that requests and displays a {@link PublisherInterstitialAd}.
+ * This class shows how to request and display a DFP Interstitials in your application.
  */
 public class DfpInterstitialSample extends Activity {
 
@@ -26,16 +27,10 @@ public class DfpInterstitialSample extends Activity {
 	private static final String LOG_TAG = "DfpInterstitialSample";
 
 	//update this value with your DFP Ad Unit ID
-	private static final String MY_AD_UNIT_ID = "";
+	protected static final String MY_AD_UNIT_ID = "/11027047/vrvanapint";
 
 	//update this value with your Verve Mobile supplied keyword
 	private static final String MY_PARTNER_KEYWORD = "adsdkexample";
-
-	/** Button text values for the interstitial show button. */
-	private static final String TEXT_NOT_READY = "Interstitial Not Ready";
-	private static final String TEXT_LOADING = "Loading Interstitial...";
-	private static final String TEXT_SHOW = "Show Interstitial";
-	private static final String TEXT_FAILED_TO_LOAD = "Ad Failed to Load";
 
 	/** The interstitial ad. */
 	private PublisherInterstitialAd interstitialAd;
@@ -49,8 +44,7 @@ public class DfpInterstitialSample extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dfp_interstitial_sample);
-
+		setContentView(R.layout.interstitial_sample);
 		setTitle(R.string.dfp_interstitial_sample);
 
 		// Create an ad.
@@ -61,7 +55,7 @@ public class DfpInterstitialSample extends Activity {
 		interstitialAd.setAdListener(new InterstitialAdListener());
 		
 		showButton = (Button) findViewById(R.id.showButton);
-		showButton.setText(TEXT_NOT_READY);
+		showButton.setText(R.string.ad_not_ready);
 		showButton.setEnabled(false);
 
 		loadButton = (Button) findViewById(R.id.loadButton);
@@ -71,7 +65,7 @@ public class DfpInterstitialSample extends Activity {
 	public void loadInterstitial(View unusedview) {
 		showButton.setEnabled(false);
 		// Disable the show button until the new ad is loaded.
-		showButton.setText(TEXT_LOADING);
+		showButton.setText(R.string.ad_loading);
 		showButton.setEnabled(false);
 		
 		// Load the interstitial ad.
@@ -85,12 +79,12 @@ public class DfpInterstitialSample extends Activity {
 		dfpExtras.setPartnerKeyword(MY_PARTNER_KEYWORD);
 		dfpExtras.setCategory(Category.NEWS_AND_INFORMATION);
 
-		b.addCustomEventExtrasBundle(VerveCustomEventInterstitial.class, dfpExtras.toBundle());
+		b.addCustomEventExtrasBundle(VWDFPCustomEventInterstitial_Android.class, dfpExtras.toBundle());
 		return b.build();
 	}
 
 	/** Called when the "Show Interstitial" button is clicked. */
-	public void showInterstitial(View unusedview) {
+	public void showInterstitial(View unusedView) {
 		// Show the interstitial if it's loaded.
 		if (interstitialAd.isLoaded()) {
 			interstitialAd.show();
@@ -99,7 +93,7 @@ public class DfpInterstitialSample extends Activity {
 		}
 		
 		// Disable the show button until another interstitial is loaded.
-		showButton.setText(TEXT_NOT_READY);
+		showButton.setText(R.string.ad_not_ready);
 		showButton.setEnabled(false);
 	}
 
@@ -115,7 +109,7 @@ public class DfpInterstitialSample extends Activity {
 			Toast.makeText(DfpInterstitialSample.this, "onAdLoaded", Toast.LENGTH_SHORT).show();
 			
 			// Change the button text and enable the show button.
-			showButton.setText(TEXT_SHOW);
+			showButton.setText(R.string.show_interstitial);
 			showButton.setEnabled(true);
 			loadButton.setEnabled(false);
 		}
@@ -128,7 +122,7 @@ public class DfpInterstitialSample extends Activity {
 			Toast.makeText(DfpInterstitialSample.this, message, Toast.LENGTH_SHORT).show();
 			
 			// Change the button text and disable the show button.
-			showButton.setText(TEXT_FAILED_TO_LOAD);
+			showButton.setText(R.string.ad_failed);
 			showButton.setEnabled(false);
 			loadButton.setEnabled(true);
 		}
