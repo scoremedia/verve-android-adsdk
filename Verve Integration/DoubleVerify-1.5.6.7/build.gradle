@@ -1,8 +1,0 @@
-configurations.create("default")
-artifacts.add("default", file('DoubleVerify-1.5.6.7.aar'))
-
-task testClasses {
-    doLast {
-        println 'Dummy AAR testClasses task'
-    }
-}

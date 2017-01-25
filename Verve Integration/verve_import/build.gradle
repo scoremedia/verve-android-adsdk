@@ -35,7 +35,7 @@ dependencies {
     //ALTBEACON
     compile 'org.altbeacon:android-beacon-library:2.9.2'
     //ROXIMITY
-    compile project(':Roximity-sdk-2.0.39')
+    compile project(':Roximity-sdk-2.0.40')
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'org.slf4j:slf4j-api:1.7.10'
     //MOAT
@@ -45,8 +45,8 @@ dependencies {
     //GSON
     compile 'com.google.code.gson:gson:2.8.0'
     //AdSDK
-    compile project(':Verve_AdSDK_3.3.0')
+    compile project(':Verve_AdSDK_3.3.1')
     //DV
-    compile project(':DoubleVerify-1.5.6.7')
+    compile project(':DoubleVerify-1.5.7')
     compile 'com.android.volley:volley:1.0.0'
 }

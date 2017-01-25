@@ -1,8 +1,11 @@
 include ':VRV-moat-mobile-app-kit-1.7.6'
 project(':VRV-moat-mobile-app-kit-1.7.6').projectDir = file('../VRV-moat-mobile-app-kit-1.7.6')
 
-include ':Roximity-sdk-2.0.39'
-project(':Roximity-sdk-2.0.39').projectDir = file('../Roximity-sdk-2.0.39')
+include ':Roximity-sdk-2.0.40'
+project(':Roximity-sdk-2.0.40').projectDir = file('../Roximity-sdk-2.0.40')
 
-include ':Verve_AdSDK_3.3.0'
-project(':Verve_AdSDK_3.3.0').projectDir = file('../Verve_AdSDK_3.3.0')
+include ':Verve_AdSDK_3.3.1'
+project(':Verve_AdSDK_3.3.1').projectDir = file('../Verve_AdSDK_3.3.1')
+
+include ':DoubleVerify-1.5.7'
+project(':DoubleVerify-1.5.7').projectDir = file('../DoubleVerify-1.5.7')
