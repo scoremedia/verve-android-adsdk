@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "24.0.3"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.vervewireless.mastersampleapplication"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 5
-        versionName "3.0"
+        versionCode 6
+        versionName "3.3.2"
     }
     buildTypes {
         release {
@@ -27,6 +27,9 @@ dependencies {
         transitive = true
     }
     // End MoPub
+
+    // Dfp
+    compile 'com.google.android.gms:play-services-ads:10.0.1'
 
     //AppNexus
     compile 'com.appnexus.opensdk:appnexus-sdk:2.15.1'

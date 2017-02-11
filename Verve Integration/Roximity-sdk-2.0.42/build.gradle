@@ -1,0 +1,8 @@
+configurations.create("default")
+artifacts.add("default", file('ROXIMITY_SDK_2_0_42.aar'))
+
+task testClasses {
+    doLast {
+        println 'Dummy AAR testClasses task'
+    }
+}

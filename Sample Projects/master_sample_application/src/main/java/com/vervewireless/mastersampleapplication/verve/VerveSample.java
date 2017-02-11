@@ -116,7 +116,7 @@ public class VerveSample extends Activity {
 
             @Override
             public void onAdClosed() {
-                Log.d(TAG, "InterstitialAd No Fill");
+                Log.d(TAG, "InterstitialAd Closed");
             }
 
         });
