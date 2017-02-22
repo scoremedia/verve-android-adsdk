@@ -1,0 +1,8 @@
+configurations.create("default")
+artifacts.add("default", file('Verve_AdSDK_3.3.3.aar'))
+
+task testClasses {
+    doLast {
+        println 'Dummy AAR testClasses task'
+    }
+}
