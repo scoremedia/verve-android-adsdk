@@ -23,8 +23,8 @@ public class AppNexusBannerSample extends Activity{
     private static final String MY_PARTNER_KEYWORD = "adsdkexample";
 
     //Banner placement ID
-    protected String PLACEMENT_ID_PHONE = "9308318";
-    protected String PLACEMENT_ID_TABLET = "9836522";
+    protected String PLACEMENT_ID_PHONE = "11113613";
+    protected String PLACEMENT_ID_TABLET = "11113618";
     //Phone banner size.
     protected int adWidth;
     protected int adHeight;

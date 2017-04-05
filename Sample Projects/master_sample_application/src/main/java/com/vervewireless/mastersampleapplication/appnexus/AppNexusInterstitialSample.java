@@ -25,7 +25,7 @@ public class AppNexusInterstitialSample extends Activity {
     /** The log tag. */
     private static final String LOG_TAG = "InterstitialSample";
 
-    private static final String PLACEMENT_ID = "9517955";
+    private static final String PLACEMENT_ID = "11113620";
 
     //update this value with your Verve Mobile supplied keyword
     private static final String MY_PARTNER_KEYWORD = "adsdkexample";

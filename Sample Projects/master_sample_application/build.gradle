@@ -8,8 +8,8 @@ android {
         applicationId "com.vervewireless.mastersampleapplication"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 7
-        versionName "3.3.3"
+        versionCode 8
+        versionName "3.3.4"
     }
     buildTypes {
         release {
