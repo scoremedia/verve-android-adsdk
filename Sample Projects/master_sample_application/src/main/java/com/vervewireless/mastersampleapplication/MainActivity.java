@@ -9,8 +9,8 @@ import android.widget.ListView;
 
 import com.vervewireless.advert.VerveAdSDK;
 import com.vervewireless.mastersampleapplication.appnexus.AppNexusBannerSample;
-import com.vervewireless.mastersampleapplication.appnexus.AppNexusRectangleSample;
 import com.vervewireless.mastersampleapplication.appnexus.AppNexusInterstitialSample;
+import com.vervewireless.mastersampleapplication.appnexus.AppNexusRectangleSample;
 import com.vervewireless.mastersampleapplication.dfp.DfpBannerSample;
 import com.vervewireless.mastersampleapplication.dfp.DfpInterstitialSample;
 import com.vervewireless.mastersampleapplication.dfp.DfpRectangleSample;

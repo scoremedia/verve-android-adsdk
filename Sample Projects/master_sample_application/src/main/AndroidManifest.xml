@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.vervewireless.mastersampleapplication">
 
     <application
@@ -17,21 +18,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".verve.VerveSample"/>
-        <activity android:name=".verve.VerveSplashManagerSample"/>
-        <activity android:name=".verve.VerveRectangleSample"/>
+        <activity android:name=".verve.VerveSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".verve.VerveSplashManagerSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".verve.VerveRectangleSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
 
-        <activity android:name=".dfp.DfpBannerSample"/>
-        <activity android:name=".dfp.DfpInterstitialSample"/>
-        <activity android:name=".dfp.DfpRectangleSample"/>
+        <activity android:name=".dfp.DfpBannerSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".dfp.DfpInterstitialSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".dfp.DfpRectangleSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
 
-        <activity android:name=".mopub.MoPubBannerSample"/>
-        <activity android:name=".mopub.MoPubInterstitialSample"/>
-        <activity android:name=".mopub.MoPubRectangleSample"/>
+        <activity android:name=".mopub.MoPubBannerSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".mopub.MoPubInterstitialSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".mopub.MoPubRectangleSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
 
-        <activity android:name=".appnexus.AppNexusBannerSample"/>
-        <activity android:name=".appnexus.AppNexusRectangleSample"/>
-        <activity android:name=".appnexus.AppNexusInterstitialSample"/>
+        <activity android:name=".appnexus.AppNexusBannerSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".appnexus.AppNexusRectangleSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
+        <activity android:name=".appnexus.AppNexusInterstitialSample" android:parentActivityName=".MainActivity" tools:ignore="UnusedAttribute"/>
 
         <!--Only needed for MoPub-->
         <!--Start MoPub Activities-->
@@ -45,6 +46,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"/>
 
         <activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+
+        <!-- MoPub activity added in 4.12 -->
+        <activity android:name="com.mopub.mobileads.RewardedMraidActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
         <!--End MoPub Activities-->
 

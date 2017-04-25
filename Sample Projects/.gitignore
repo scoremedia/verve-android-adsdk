@@ -1,0 +1,18 @@
+# ignore build directories
+build
+app_aar
+
+# ignore local build properties
+local.properties
+
+# ignore Macintosh system files everywhere
+.DS_Store
+
+# ignore Windows system files everywhere
+desktop.ini
+Thumbs.db
+
+# ignore local Android Studio files
+.gradle
+.idea
+*.iml

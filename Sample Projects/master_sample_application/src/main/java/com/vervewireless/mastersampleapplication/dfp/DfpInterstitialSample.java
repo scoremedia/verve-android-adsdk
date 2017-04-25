@@ -15,7 +15,6 @@ import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
 import com.vervewireless.advert.Category;
 import com.vervewireless.advert.mediation.DFPExtras;
 import com.vervewireless.advert.mediation.VWDFPCustomEventInterstitial_Android;
-import com.vervewireless.advert.mediation.VerveCustomEventInterstitial;
 import com.vervewireless.mastersampleapplication.R;
 
 /**

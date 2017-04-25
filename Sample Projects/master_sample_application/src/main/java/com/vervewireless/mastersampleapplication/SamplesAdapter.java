@@ -8,14 +8,14 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class SamplesAdapter extends BaseAdapter {
+class SamplesAdapter extends BaseAdapter {
 
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
 
-    public List<SampleItem> listOfItems;
+    private List<SampleItem> listOfItems;
 
-    public SamplesAdapter(List<SampleItem> listOfItems) {
+    SamplesAdapter(List<SampleItem> listOfItems) {
         this.listOfItems = listOfItems;
     }
 
@@ -72,11 +72,11 @@ public class SamplesAdapter extends BaseAdapter {
 
         private TextView sampleName;
 
-        public ViewHolder(View v) {
+        ViewHolder(View v) {
             sampleName = (TextView) v.findViewById(R.id.sampleName);
         }
 
-        public void setSampleName(String name) {
+        void setSampleName(String name) {
             sampleName.setText(name);
         }
     }
