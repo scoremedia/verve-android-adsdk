@@ -41,7 +41,7 @@ dependencies {
     //GSON
     compile 'com.google.code.gson:gson:2.8.0'
     //AdSDK
-    compile project(':Verve_AdSDK_3.4.0')
+    compile project(':Verve_AdSDK_3.4.1')
     //DV
     compile project(':DoubleVerify-1.5.8.1')
     compile 'com.android.volley:volley:1.0.0'
