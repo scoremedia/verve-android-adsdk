@@ -43,6 +43,11 @@
     <string name="appnexus_interstitial_sample">AppNexus Interstitial Sample</string>
     <string name="appnexus_rectangle_sample">AppNexus Rectangle Sample</string>
 
+    <!-- Sample text -->
+    <string name="sample_text1">Lorem ipsum dolor sit amet, eos ullum similique efficiantur te, postulant partiendo vix ei. Has eu epicurei phaedrum. Vis ex illum meliore, velit invenire ne mel, suas diam iusto an sea. Vel bonorum recusabo definitionem ut, alii case veritus te vel. Vix ridens fabellas nominati ne, ei mei agam facete ceteros, at dolore ridens delicata duo. Hinc persius appetere at qui, ut elitr legere phaedrum mea.</string>
+    <string name="sample_text2">His ne quodsi denique volutpat, pri ei soleat accusam appellantur, sea laboramus referrentur ut. Ius regione convenire te. Mei te vulputate appellantur, essent similique constituam ex mei, legere molestie at est. Sit at regione vocibus, nec putent senserit ad. Et noster oporteat appellantur vim, sea at altera nemore corpora, per vocent facilis dolores in.</string>
+
+
     <!--Uncomment this if you want to show Permission Explanation dialogs -->
     <!--title is optional -->
     <!--<string name="location_permission_explanation_title">Location explanation title</string>-->

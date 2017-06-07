@@ -13,6 +13,7 @@ import com.vervewireless.advert.Ad;
 import com.vervewireless.advert.AdClickedListener;
 import com.vervewireless.advert.AdError;
 import com.vervewireless.advert.AdListener;
+import com.vervewireless.advert.AdPosition;
 import com.vervewireless.advert.AdRequest;
 import com.vervewireless.advert.AdResponse;
 import com.vervewireless.advert.AdView;
@@ -243,7 +244,9 @@ public class VerveSample extends Activity {
 		 * ACCESS_COARSE_LOCATION
 		 * ACCESS_FINE_LOCATION
 		 */
-        mAdView.requestAd(createAdRequest());
+		AdRequest adRequest = createAdRequest();
+        adRequest.setPosition(AdPosition.BOTTOM);
+        mAdView.requestAd(adRequest);
     }
 
     private void requestNewInterstitialAd() {

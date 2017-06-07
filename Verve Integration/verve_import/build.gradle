@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         minSdkVersion 14
@@ -27,14 +27,12 @@ repositories {
 
 dependencies {
     //AdSDK requires
-    compile 'com.android.support:support-v4:25.0.1'
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:recyclerview-v7:25.0.1'
-    compile 'com.google.android.gms:play-services-location:10.0.1'
-    //ALTBEACON
-    compile 'org.altbeacon:android-beacon-library:2.9.2'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.google.android.gms:play-services-location:10.2.1'
     //ROXIMITY
-    compile project(':Roximity-sdk-2.0.42')
+    compile project(':Roximity-sdk-2.0.44')
     compile 'com.loopj.android:android-async-http:1.4.9'
     //MOAT
     compile project(':VRV-moat-mobile-app-kit-1.7.6')
@@ -43,7 +41,8 @@ dependencies {
     //GSON
     compile 'com.google.code.gson:gson:2.8.0'
     //AdSDK
-    compile project(':Verve_AdSDK_3.3.4')
+    compile project(':Verve_AdSDK_3.4.1')
     //DV
-    compile project(':DoubleVerify-1.5.8')
+    compile project(':DoubleVerify-1.5.8.1')
+    compile 'com.android.volley:volley:1.0.0'
 }
