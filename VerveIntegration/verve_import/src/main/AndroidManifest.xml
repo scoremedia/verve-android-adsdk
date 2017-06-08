@@ -1,0 +1,5 @@
+<manifest package="com.vervewireless.advert.verve_import_support"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk tools:overrideLibrary="com.moat.analytics.mobile.vrv, com.doubleverify.dvsdk, com.vervewireless.advert "/>
+    <application/>
+</manifest>
