@@ -39,7 +39,7 @@ dependencies {
 	//IAS
 	compile fileTree(dir: 'libs', include: ['*.jar'])
     //AdSDK
-    compile project(':Verve_AdSDK_3.5.0')
+    compile project(':Verve_AdSDK_3.5.1')
     //DV
     compile project(':DoubleVerify-1.5.8.2')
     compile 'com.android.volley:volley:1.0.0'
