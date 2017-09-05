@@ -44,8 +44,8 @@ public class SampleApplication extends Application {
                 * verve_tablet_splash_land - tablet landscape
                 *
                 */
-                splashAdManager.setShowSplashImageOnAppStart(true);
-                splashAdManager.start();
+                //splashAdManager.setShowSplashImageOnAppStart(true);
+                //splashAdManager.start();
 
                 // Only used when targeting API 23 and up
                 verveAdSDK.setLocationPermissionDelegate(new LocationPermissionDelegate() {
