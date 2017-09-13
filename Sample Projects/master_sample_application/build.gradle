@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
         applicationId "com.vervewireless.mastersampleapplication"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 8
-        versionName "3.4.1"
+        versionCode 12
+        versionName "3.5.2"
     }
     buildTypes {
         release {
@@ -23,14 +23,14 @@ dependencies {
     compile project(':verve_import')
     // Only needed for MoPub
     // Begin MoPub Requirements
-    compile('com.mopub:mopub-sdk:4.12.0@aar') {
+    compile('com.mopub:mopub-sdk:4.14.0@aar') {
         transitive = true
     }
     // End MoPub
 
     // Dfp
-    compile 'com.google.android.gms:play-services-ads:10.2.1'
+    compile 'com.google.android.gms:play-services-ads:10.2.6'
 
     //AppNexus
-    compile 'com.appnexus.opensdk:appnexus-sdk:2.15.1'
+    compile 'com.appnexus.opensdk:appnexus-sdk:3.2'
 }

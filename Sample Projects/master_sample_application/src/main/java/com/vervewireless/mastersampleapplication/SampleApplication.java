@@ -7,7 +7,13 @@ import com.vervewireless.advert.Category;
 import com.vervewireless.advert.LocationPermissionDelegate;
 import com.vervewireless.advert.SplashAdManager;
 import com.vervewireless.advert.StoragePermissionDelegate;
+import com.vervewireless.advert.VWUserDemographics;
 import com.vervewireless.advert.VerveAdSDK;
+import com.vervewireless.advert.demographics.VWDateComponents;
+import com.vervewireless.advert.demographics.VWEducation;
+import com.vervewireless.advert.demographics.VWEthnicity;
+import com.vervewireless.advert.demographics.VWGender;
+import com.vervewireless.advert.demographics.VWMaritalStatus;
 
 public class SampleApplication extends Application {
 
@@ -38,8 +44,8 @@ public class SampleApplication extends Application {
                 * verve_tablet_splash_land - tablet landscape
                 *
                 */
-                splashAdManager.setShowSplashImageOnAppStart(true);
-                splashAdManager.start();
+                //splashAdManager.setShowSplashImageOnAppStart(true);
+                //splashAdManager.start();
 
                 // Only used when targeting API 23 and up
                 verveAdSDK.setLocationPermissionDelegate(new LocationPermissionDelegate() {
@@ -69,6 +75,37 @@ public class SampleApplication extends Application {
 
                 // Enable logging, possible values Log.INFO (default), Log.WARN, Log.ERROR
                 verveAdSDK.setLogPrintLevel(Log.INFO);
+
+
+                //Set the user demographics data
+                VWUserDemographics userDemographics = new VWUserDemographics();
+
+                userDemographics.setBirthDateComponents(new VWDateComponents(1992, 3, 15));
+                //Can also use the following two.
+//                userDemographics.setAgeRange(VWAgeRange.FROM_18_TO_24);
+//                userDemographics.setAge(23);
+
+                userDemographics.setIncome(123541);
+                //Can also use the following
+//                userDemographics.setIncomeRange(VWIncomeRange.FROM_100K_TO_150K);
+
+                userDemographics.setMaritalStatus(VWMaritalStatus.MARRIED);
+                userDemographics.setEducation(VWEducation.DOCTORATE);
+                userDemographics.setGender(VWGender.MALE);
+                userDemographics.setEthnicity(VWEthnicity.ASIAN);
+                userDemographics.setOther("car", "Ford Mustang");
+
+                //Builder pattern is also available.
+
+//                userDemographics = new VWUserDemographicsBuilder().
+//                        ageRange(VWAgeRange.FROM_45_TO_54).
+//                        education(VWEducation.HIGH_SCHOOL).
+//                        ethnicity(VWEthnicity.HISPANIC).
+//                        gender(VWGender.MALE).
+//                        incomeRange(VWIncomeRange.FROM_50K_TO_75K).
+//                        build();
+
+                verveAdSDK.setUserDemographics(getApplicationContext(), userDemographics);
             }
         });
 
