@@ -38,14 +38,6 @@ public class VerveSplashManagerSample extends Activity {
         splashAdManager.setAdKeyword(MY_AD_KEYWORD);
         splashAdManager.setCategory(Category.HOME_PAGE);
 
-        ToggleButton trackingButton = (ToggleButton) findViewById(R.id.toggleButton);
-        trackingButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                splashAdManager.setLimitUserTrackingEnabled(!isChecked);
-            }
-        });
-
         ToggleButton toggleSplashButton = (ToggleButton) findViewById(R.id.toggleSplashButton);
         toggleSplashButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

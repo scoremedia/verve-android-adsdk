@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ToggleButton;
 
 import com.vervewireless.advert.Ad;
 import com.vervewireless.advert.AdClickedListener;
@@ -34,17 +33,12 @@ public class VerveSample extends Activity {
     private InterstitialAd mInterstitialAd;
     private SplashAd mSplashAd;
 
-
-    private ToggleButton trackingButton;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.verve_sample);
 
         setTitle(R.string.verve_sdk_samples);
-
-        trackingButton = (ToggleButton) findViewById(R.id.toggleButton);
 
         //BANNER AD VIEW IMPL.
         mAdView = (AdView) findViewById(R.id.adView);
@@ -227,12 +221,6 @@ public class VerveSample extends Activity {
 		 * Default to Category.NEWS
 		 */
         adRequest.setCategory(Category.HOME_PAGE);
-
-		/*
-         * You can decide not to have tracking on your users (optional).
-		 */
-        adRequest.setLimitUserTrackingEnabled(!trackingButton.isChecked());
-
         return adRequest;
     }
 
