@@ -13,16 +13,6 @@
         android:layout_alignParentTop="true">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="7dip"
-            android:checked="true"
-            android:textOff="@string/trackingOff"
-            android:textOn="@string/trackingOn"
-            android:padding="10dip"/>
-
-        <ToggleButton
             android:id="@+id/toggleSplashButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -8,6 +8,7 @@ import com.vervewireless.advert.LocationPermissionDelegate;
 import com.vervewireless.advert.SplashAdManager;
 import com.vervewireless.advert.StoragePermissionDelegate;
 import com.vervewireless.advert.VWUserDemographics;
+import com.vervewireless.advert.VWUserDemographicsBuilder;
 import com.vervewireless.advert.VerveAdSDK;
 import com.vervewireless.advert.demographics.VWDateComponents;
 import com.vervewireless.advert.demographics.VWEducation;
@@ -78,36 +79,23 @@ public class SampleApplication extends Application {
 
 
                 //Set the user demographics data
-                VWUserDemographics userDemographics = new VWUserDemographics();
-
-                userDemographics.setBirthDateComponents(new VWDateComponents(1992, 3, 15));
-                //Can also use the following two.
-//                userDemographics.setAgeRange(VWAgeRange.FROM_18_TO_24);
-//                userDemographics.setAge(23);
-
-                userDemographics.setIncome(123541);
-                //Can also use the following
-//                userDemographics.setIncomeRange(VWIncomeRange.FROM_100K_TO_150K);
-
-                userDemographics.setMaritalStatus(VWMaritalStatus.MARRIED);
-                userDemographics.setEducation(VWEducation.DOCTORATE);
-                userDemographics.setGender(VWGender.MALE);
-                userDemographics.setEthnicity(VWEthnicity.ASIAN);
-                userDemographics.setOther("car", "Ford Mustang");
-
-                //Builder pattern is also available.
-
-//                userDemographics = new VWUserDemographicsBuilder().
-//                        ageRange(VWAgeRange.FROM_45_TO_54).
-//                        education(VWEducation.HIGH_SCHOOL).
-//                        ethnicity(VWEthnicity.HISPANIC).
-//                        gender(VWGender.MALE).
-//                        incomeRange(VWIncomeRange.FROM_50K_TO_75K).
-//                        build();
+                VWUserDemographics userDemographics = VWUserDemographicsBuilder.create(SampleApplication.this)
+                        .birthDateComponents(new VWDateComponents(SampleApplication.this, 1992, 3, 15))
+//                 Can also use the following two.
+//                .ageRance(VWAgeRange.FROM_18_TO_24);
+//                .age(23);
+                        .income(123541)
+//                 Can also use the following
+//                .incomeRange(VWIncomeRange.FROM_100K_TO_150K);
+                        .maritalStatus(VWMaritalStatus.MARRIED)
+                        .education(VWEducation.DOCTORATE)
+                        .gender(VWGender.MALE)
+                        .ethnicity(VWEthnicity.ASIAN)
+                        .other("car", "Ford Mustang")
+                        .build();
 
                 verveAdSDK.setUserDemographics(getApplicationContext(), userDemographics);
             }
         });
-
     }
 }

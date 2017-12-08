@@ -38,10 +38,6 @@ public class VerveRectangleSample extends Activity {
 
 
         verveWebView = (VerveWebView) findViewById(R.id.verveWebView);
-        /*
-         * You can decide not to have tracking on your users (optional).
-		 */
-        verveWebView.setLimitUserTrackingEnabled(true);
          /*
          * Add a category to the ad request (optional).
 		 * Default to Category.NEWS
