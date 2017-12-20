@@ -30,9 +30,9 @@ repositories {
 
 dependencies {
     //AdSDK requires
-    compile 'com.android.support:support-v4:26.0.2'
-    compile 'com.android.support:appcompat-v7:26.0.2'
-    compile 'com.android.support:recyclerview-v7:26.0.2'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.google.android.gms:play-services-location:11.2.2'
     //ROXIMITY
     compile project(':Roximity-sdk-2.0.44')
