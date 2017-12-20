@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -23,14 +23,17 @@ android {
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
 }
 
 dependencies {
     //AdSDK requires
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.google.android.gms:play-services-location:10.2.6'
+    compile 'com.android.support:support-v4:26.0.2'
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
+    compile 'com.google.android.gms:play-services-location:11.2.2'
     //ROXIMITY
     compile project(':Roximity-sdk-2.0.44')
     compile 'com.loopj.android:android-async-http:1.4.9'
@@ -39,5 +42,5 @@ dependencies {
 	//IAS
 	compile fileTree(dir: 'libs', include: ['*.jar'])
     //AdSDK
-    compile project(':Verve_AdSDK_3.5.2')
+    compile project(':Verve_AdSDK_3.6.0')
 }

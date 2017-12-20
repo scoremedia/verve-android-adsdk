@@ -1,5 +1,12 @@
 <manifest package="com.vervewireless.advert.verve_import_support"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-sdk tools:overrideLibrary="com.moat.analytics.mobile.vrv"/>
+    <uses-sdk tools:overrideLibrary="com.moat.analytics.mobile.vrv, com.moat.analytics.mobile.mpub,
+         com.mopub.mobileads,
+         com.mopub.mobileads.banner,
+         com.mopub.mobileads.rewarded_video,
+         com.mopub.mobileads.interstitial,
+         com.mopub.mobileads.native_video,
+         com.mopub.mobileads.native_static,
+         com.mopub.mobileads.base"/>
     <application/>
 </manifest>
