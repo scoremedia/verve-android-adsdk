@@ -30,17 +30,17 @@ repositories {
 
 dependencies {
     //AdSDK requires
-    compile 'com.android.support:support-v4:26.1.0'
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-location:11.2.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.google.android.gms:play-services-location:11.2.2'
     //ROXIMITY
-    compile project(':Roximity-sdk-2.0.44')
-    compile 'com.loopj.android:android-async-http:1.4.9'
+    implementation project(':Roximity-sdk-2.0.44')
+    implementation 'com.loopj.android:android-async-http:1.4.9'
     //MOAT
-    compile project(':VRV-moat-mobile-app-kit-1.7.6')
+    implementation project(':VRV-moat-mobile-app-kit-1.7.6')
 	//IAS
-	compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     //AdSDK
-    compile project(':Verve_AdSDK_3.6.0')
+    implementation project(':Verve_AdSDK_3.6.0')
 }
