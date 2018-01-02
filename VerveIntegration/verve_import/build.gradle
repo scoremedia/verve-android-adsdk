@@ -35,12 +35,12 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.google.android.gms:play-services-location:11.2.2'
     //ROXIMITY
-    implementation project(':Roximity-sdk-2.0.44')
+    api project(':Roximity-sdk-2.0.44')
     implementation 'com.loopj.android:android-async-http:1.4.9'
     //MOAT
-    implementation project(':VRV-moat-mobile-app-kit-1.7.6')
+    api project(':VRV-moat-mobile-app-kit-1.7.6')
 	//IAS
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
     //AdSDK
-    implementation project(':Verve_AdSDK_3.6.0')
+    api project(':Verve_AdSDK_3.6.0')
 }
