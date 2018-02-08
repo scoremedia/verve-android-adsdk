@@ -1,5 +1,5 @@
 configurations.create("default")
-artifacts.add("default", file('Verve_AdSDK_3.6.0.aar'))
+artifacts.add("default", file('Verve_AdSDK_3.6.1.aar'))
 
 task testClasses {
     doLast {

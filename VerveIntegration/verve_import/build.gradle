@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '26.0.1'
 
     defaultConfig {
         minSdkVersion 14
@@ -30,17 +30,17 @@ repositories {
 
 dependencies {
     //AdSDK requires
-    implementation 'com.android.support:support-v4:26.1.0'
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
-    implementation 'com.google.android.gms:play-services-location:11.2.2'
+    compile 'com.android.support:support-v4:26.0.2'
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
+    compile 'com.google.android.gms:play-services-location:11.2.2'
     //ROXIMITY
-    api project(':Roximity-sdk-2.0.44')
-    implementation 'com.loopj.android:android-async-http:1.4.9'
+    compile project(':Roximity-sdk-2.0.44')
+    compile 'com.loopj.android:android-async-http:1.4.9'
     //MOAT
-    api project(':VRV-moat-mobile-app-kit-1.7.6')
+    compile project(':VRV-moat-mobile-app-kit-1.7.6')
 	//IAS
-    api fileTree(dir: 'libs', include: ['*.jar'])
+	compile fileTree(dir: 'libs', include: ['*.jar'])
     //AdSDK
-    api project(':Verve_AdSDK_3.6.0')
+    compile project(':Verve_AdSDK_3.6.1')
 }
