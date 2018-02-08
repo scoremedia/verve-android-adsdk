@@ -39,8 +39,8 @@ dependencies {
     implementation 'com.loopj.android:android-async-http:1.4.9'
     //MOAT
     api project(':VRV-moat-mobile-app-kit-1.7.6')
-	//IAS
-	api fileTree(dir: 'libs', include: ['*.jar'])
+    //IAS
+    api fileTree(dir: 'libs', include: ['*.jar'])
     //AdSDK
     api project(':Verve_AdSDK_3.6.1')
 }
