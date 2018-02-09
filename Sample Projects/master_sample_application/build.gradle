@@ -9,7 +9,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 13
-        versionName "3.6.0"
+        versionName "3.6.1"
     }
     buildTypes {
         release {
@@ -34,8 +34,6 @@ dependencies {
     // Begin MoPub Requirements
     compile('com.mopub:mopub-sdk:4.16.1@aar') {
         transitive = true
-        exclude module: 'libAvid-mopub' // To exclude AVID
-        exclude module: 'moat-mobile-app-kit' // To exclude Moat
     }
     // End MoPub
 

@@ -1,13 +1,13 @@
 include ':master_sample_application'
 
 include ':verve_import'
-project(':verve_import').projectDir = file('../Verve Integration/verve_import')
+project(':verve_import').projectDir = file('../VerveIntegration/verve_import')
 
 include ':VRV-moat-mobile-app-kit-1.7.6'
-project(':VRV-moat-mobile-app-kit-1.7.6').projectDir = file('../Verve Integration/VRV-moat-mobile-app-kit-1.7.6')
+project(':VRV-moat-mobile-app-kit-1.7.6').projectDir = file('../VerveIntegration/VRV-moat-mobile-app-kit-1.7.6')
 
 include ':Roximity-sdk-2.0.44'
-project(':Roximity-sdk-2.0.44').projectDir = file('../Verve Integration/Roximity-sdk-2.0.44')
+project(':Roximity-sdk-2.0.44').projectDir = file('../VerveIntegration/Roximity-sdk-2.0.44')
 
-include ':Verve_AdSDK_3.6.0'
-project(':Verve_AdSDK_3.6.0').projectDir = file('../Verve Integration/Verve_AdSDK_3.6.0')
+include ':Verve_AdSDK_3.6.1'
+project(':Verve_AdSDK_3.6.1').projectDir = file('../VerveIntegration/Verve_AdSDK_3.6.1')
