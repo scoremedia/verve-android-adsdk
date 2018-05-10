@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -30,10 +30,10 @@ repositories {
 
 dependencies {
     //AdSDK requires
-    compile 'com.android.support:support-v4:26.1.0'
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-location:11.6.0'
+    compile 'com.android.support:support-v4:27.1.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
     //ROXIMITY
     compile project(':Roximity-sdk-2.0.46')
     compile 'com.loopj.android:android-async-http:1.4.9'
@@ -42,5 +42,5 @@ dependencies {
 	//IAS
     compile files('libs/libAvid-verve-3.6.4.jar')
     //AdSDK
-    compile project(':Verve_AdSDK_3.7.1')
+    compile project(':Verve_AdSDK_3.7.2')
 }
