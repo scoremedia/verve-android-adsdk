@@ -1,5 +1,5 @@
 <manifest package="com.vervewireless.advert.verve_import_support"
-    xmlns:tools="http://schemas.android.com/tools">
+          xmlns:tools="http://schemas.android.com/tools">
     <uses-sdk tools:overrideLibrary="com.moat.analytics.mobile.vrv, com.moat.analytics.mobile.mpub,
          com.mopub.mobileads,
          com.mopub.mobileads.banner,
