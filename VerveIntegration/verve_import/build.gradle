@@ -38,5 +38,5 @@ dependencies {
 	//IAS
     api files('libs/libAvid-verve-3.6.4.jar')
     //AdSDK
-    api project(':Verve_AdSDK_3.7.4')
+    api project(':Verve_AdSDK_3.7.5')
 }

@@ -1,5 +1,5 @@
 include ':VRV-moat-mobile-app-kit-1.7.6'
 project(':VRV-moat-mobile-app-kit-1.7.6').projectDir = file('../VRV-moat-mobile-app-kit-1.7.6')
 
-include ':Verve_AdSDK_3.7.4'
-project(':Verve_AdSDK_3.7.4').projectDir = file('../Verve_AdSDK_3.7.4')
+include ':Verve_AdSDK_3.7.5'
+project(':Verve_AdSDK_3.7.5').projectDir = file('../Verve_AdSDK_3.7.5')
